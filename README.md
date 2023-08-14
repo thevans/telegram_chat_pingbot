@@ -1,4 +1,4 @@
-# telegram_chat_pingbot
+# Telegram Chat Pingbot
 Scriptbot para pingar grupo do telegram
 
 # Para rodar:
