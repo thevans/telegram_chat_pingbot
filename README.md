@@ -1,5 +1,5 @@
 # Telegram Chat Pingbot
 Scriptbot para pingar grupo do telegram
 
-# Para rodar:
+## Para rodar:
 py ping_bot.py
