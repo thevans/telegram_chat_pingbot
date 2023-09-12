@@ -2,11 +2,11 @@ from telethon.sync import TelegramClient, events
 import time
 import asyncio
 
-api_id = 29383914
-api_hash = '840159bfcf1d014d7fd1ff90a6b89352'
+api_id = 1234
+api_hash = 'xxxxx'
 
-debug_group = -1001826665605
-free_group = -1001403599306
+debug_group = -11111111111111
+free_group = -11111111111111
 
 interval = 1800
 
