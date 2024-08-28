@@ -26,11 +26,17 @@ async def send_live_message(time_for_message):
 
 async def send_tiktok_message(time_for_message):
     schedule_date = datetime.datetime.fromtimestamp(time_for_message)
-    logging.info(f'Agendando comando /live para {schedule_date}')
+    logging.info(f'Agendando comando /tiktok para {schedule_date}')
     await client.send_message(free_group, '/tiktok', schedule=schedule_date)
 
 
 async def execute_interval(interval):
+    # # Cria um objeto datetime para o final do dia atual para envio até meia noite
+    # end_of_day = datetime.datetime(now.year, now.month, now.day, 23, 59, 59)
+    # # Calcula a diferença em segundos
+    # total_seconds = (end_of_day - now).total_seconds()
+    # total_interactions = total_seconds / interval
+
     logging.info(f"Executando o agendamento das mensagens a cada {int(interval/60)} minutos...")
     alternate = False
     count = 0
@@ -39,8 +45,8 @@ async def execute_interval(interval):
 
     now = datetime.datetime.now()
     tomorrow = now + datetime.timedelta(days=1)
-    initial_timestamp = datetime.datetime(tomorrow.year, tomorrow.month, tomorrow.day, 0, 0, 0)
-    seconds_initial_timestamp = int(initial_timestamp.timestamp())
+    # initial_timestamp = datetime.datetime(now.year, now.month, now.day, 0, 0, 0)
+    seconds_initial_timestamp = int(now.timestamp())
 
     while total_interactions > count:
         time_for_message = seconds_initial_timestamp + (count * interval)
