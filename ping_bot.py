@@ -8,7 +8,6 @@ import logging
 api_id = 1234  # Seu ID da API do Telegram
 api_hash = 'xxxxx'  # Seu hash secreto da API do Telegram
 phone_number = "+55...."
-debug_group = -11111111111111
 free_group = -11111111111111
 
 logging.basicConfig(level=logging.INFO,
